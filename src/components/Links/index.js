@@ -4,7 +4,7 @@ import Contact from '../Contact';
 import Resume from '../Resume';
 import Projects from '../Projects';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-import Content from '../Content';
+// import Content from '../Content';
 
 function Links({ currentPage }) {
   const renderPage = () => {
