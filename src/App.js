@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Links from './components/Links'
+import Links from './components/Links';
 
-// import ContactForm from './components/Contact';
 
 function App() {
   const [pages] = useState([
       {name: 'about me' },
       {name: 'projects'},
       {name: 'resume'},
-      {name: 'contact'}
-      ]);
+      {name: 'contact'},
+        ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
   return (
@@ -22,7 +21,7 @@ function App() {
         pages={pages}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
-        ></Nav>
+        >About Projects Resume Contact</Nav>
       </Header>
       <main>
         <Links currentPage={currentPage}></Links>
