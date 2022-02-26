@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Links from './components/Links';
-
+import Nav from './components/Nav';
+import Links from './components/Link'
 
 function App() {
   const [pages] = useState([
-      {name: 'about me' },
-      {name: 'projects'},
-      {name: 'resume'},
-      {name: 'contact'},
-        ]);
+    {name: 'about me' },
+    {name: 'projects'},
+    {name: 'resume'},
+    {name: 'contact'}
+  ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
+
   return (
     <div>
       <Header>
@@ -21,7 +21,7 @@ function App() {
         pages={pages}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
-        >About Projects Resume Contact</Nav>
+        ></Nav>
       </Header>
       <main>
         <Links currentPage={currentPage}></Links>
