@@ -4,18 +4,18 @@ import Contact from '../Contact';
 import Resume from '../Resume';
 import Projects from '../Projects';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-// import Content from '../Content';
+import Content from '../Content';
 
 function Links({ currentPage }) {
   const renderPage = () => {
     switch (currentPage.name) {
-      case 'About me':
+      case 'aAbout me':
         return <About />;
-      case 'Projects':
+      case 'projects':
         return <Projects />;
-      case 'Contact':
+      case 'contact':
         return <Contact />;
-      case 'Resume':
+      case 'resume':
         return <Resume />;
       default:
         return <About />;
