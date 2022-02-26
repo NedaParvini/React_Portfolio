@@ -1,32 +1,43 @@
 import React, { useState } from 'react';
-import Footer from './components/Footer';
-import Header from './components/Header';
 import Nav from './components/Nav';
-import Links from './components/Link'
+import About from './components/About';
+
+import ContactForm from './components/Contact';
 
 function App() {
   const [pages] = useState([
-    {name: 'about me' },
-    {name: 'projects'},
-    {name: 'resume'},
-    {name: 'contact'}
+    {
+      name: 'About Me',
+      description: 'Photos of grocery stores, food trucks, and other commercial projects',
+    },
+    { name: 'Portfolio', description: 'Portraits of people in my life' },
+    { name: 'Contact', description: 'Delicious delicacies' },
+    { name: 'Resume', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
   ]);
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
 
+  const [contactSelected, setContactSelected] = useState(false);
+
   return (
     <div>
-      <Header>
-        <Nav
+      <Nav
         pages={pages}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
-        ></Nav>
-      </Header>
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      ></Nav>
       <main>
-        <Links currentPage={currentPage}></Links>
+        {!contactSelected ? (
+          <>
+            
+            <About></About>
+          </>
+        ) : (
+          <ContactForm></ContactForm>
+        )}
       </main>
-      <Footer></Footer>
     </div>
   );
 }

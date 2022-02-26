@@ -5,10 +5,10 @@ main {
 }
 :root {
   --primary: #8c54ff;
-  --secondary: #f3a847;
+  --secondary: #89b0aeff;
   --tertiary: #b12704;
-  --light: #fafafa;
-  --dark: #78afee;
+  --light: #555b6eff;
+  --dark: #bee3dbff;;
   --darker: #111111;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -30,7 +30,7 @@ body {
   padding: 0;
   font-weight: 600;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 30px;
   letter-spacing: 0.1em;
   background: var(--dark);
   color: var(--light);
