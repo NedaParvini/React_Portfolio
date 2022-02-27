@@ -1,12 +1,12 @@
 import React from 'react';
 import { removeHyphensAndCapitalize } from '../../utils/helpers';
 
-function ProjectBoard({ project }) {
+function ProjectCard({ projects }) {
 
-  const {name, repo, link, description } = project;
+  const {name, repo, link, description } = projects;
 
   return (
-    <div className='project' key={name}>
+    <div className='projects' key={name}>
       <img 
         src={require(`../../assets/projects/${name}.jpg`).default}
         alt={removeHyphensAndCapitalize(name)}
@@ -25,4 +25,4 @@ function ProjectBoard({ project }) {
   );
 }
 
-export default ProjectBoard;
+export default ProjectCard;

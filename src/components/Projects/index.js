@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ProjectBoard from '../ProjectBoard';
+import ProjectCard from '../ProjectCard';
 
 function Projects() {
 
@@ -40,11 +40,11 @@ function Projects() {
   return (
     <div>
       <div className='flex-row'>
-        {projects.map((project, idx) => (
-          <ProjectBoard
-            project={project}
-            key={'project' + idx}
-          ></ProjectBoard>        
+        {projects.map((projects, idx) => (
+          <ProjectCard
+            projects={projects}
+            key={'projects' + idx}
+          ></ProjectCard>        
         ))}
       </div>
     </div>
