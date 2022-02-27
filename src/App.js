@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import Header from './components/Header';
 import Nav from './components/Nav';
 import About from './components/About';
 import ContactForm from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [pages] = useState([
@@ -17,6 +19,7 @@ function App() {
 
   return (
     <div>
+      <Header>
       <Nav
         pages={pages}
         setCurrentPage={setCurrentPage}
@@ -24,6 +27,7 @@ function App() {
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
       ></Nav>
+      </Header>
       <main>
         {!contactSelected ? (
           <>
@@ -34,6 +38,7 @@ function App() {
           <ContactForm></ContactForm>
         )}
       </main>
+      <Footer></Footer>
     </div>
   );
 }
