@@ -30,4 +30,7 @@ Coolors
 
 ![Screenshot]() 
 
-Link: 
+
+## Link: 
+
+GitHub Page: https://nedaparvini.github.io/React_Portfolio/
