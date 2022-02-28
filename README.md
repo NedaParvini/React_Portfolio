@@ -6,13 +6,15 @@ Using React to create Portfolio application.
 
 This app has four different parts (menu) which are:
 About us, Portfolio, Contact and Resume. 
-Portfolio shows Projects with picture sample and name and GitHub links.
+Portfolio shows Projects with picture samples, name and GitHub links.
 
 
 ## Usage
-npm start
+
+npm start and GitHub Pages
 
 ## Technologies
+
 REACT
 
 JavaScript
@@ -25,6 +27,7 @@ Coolors
 
 
 ## Preview
+
 ![Screenshot]() 
 
 Link: 
