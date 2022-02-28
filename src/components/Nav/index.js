@@ -7,7 +7,9 @@ function Nav(props) {
   const {
     pages = [],
     setCurrentPage,
-    currentPage
+    currentPage,
+    contactSelected,
+    setContactSelected,
   } = props;
 
   useEffect(() => {
@@ -15,7 +17,6 @@ function Nav(props) {
   }, [currentPage]);
 
   return (
-<<<<<<< HEAD
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
@@ -69,22 +70,6 @@ function Nav(props) {
       </nav>
     </header>
   );
-=======
-    <nav>
-      <ul className="flex-row">
-        {pages.map((page) => (
-          <li className={`mx-1 ${currentPage.name === page.name && 'navActive'}`}
-          key={page.name}
-          >
-          <span onClick={() => setCurrentPage(page)}>
-            {capitalizeFirstLetter(page.name)}  
-          </span>  
-          </li>
-        ))}
-      </ul>
-    </nav>
-  )
->>>>>>> 783c966fc9b09d49ea19d92c4a8264563fb741fe
 }
 
 export default Nav;
