@@ -9,13 +9,13 @@ import Content from '../Content';
 function Links({ currentPage }) {
   const renderPage = () => {
     switch (currentPage.name) {
-      case 'About me':
+      case 'about me':
         return <About />;
       case 'projects':
         return <Projects />;
-      case 'Contact':
+      case 'contact':
         return <Contact />;
-      case 'Resume':
+      case 'resume':
         return <Resume />;
       default:
         return <About />;

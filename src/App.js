@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 // import About from './components/About';
-// import ProjectBoard from './components/ProjectBoard';
-// import ContactForm from './components/Contact';
+// import ProjectCard from './components/ProjectCard';
+import ContactForm from './components/Contact';
 // import Resume from './components/Resume';
 import Footer from './components/Footer';
-import Link from './components/Link';
+// import Link from './components/Link';
+import Content from './components/Content';
 
 function App() {
   const [pages] = useState([
-    { name: 'About Me'},
+    { name: 'Content'},
+    { name: 'About'},
     { name: 'Portfolio'},
     { name: 'Contact'},
     { name: 'Resume'}
@@ -18,7 +20,7 @@ function App() {
 
   const [currentPage, setCurrentPage] = useState(pages[0]);
 
-  // const [contactSelected, setContactSelected] = useState(false);
+  const [contactSelected, setContactSelected] = useState(false);
 
   return (
     <div>
@@ -27,16 +29,27 @@ function App() {
         pages={pages}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
-        // contactSelected={contactSelected}
-        // setContactSelected={setContactSelected}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
       </Header>
       <main>
-        
-      <Link currentPage={currentPage}></Link>
+      {!contactSelected ? (
+          <>
+      <Nav currentPage={currentPage}></Nav>
+      
+            
+          </>
+        ) : (
+          <ContactForm></ContactForm>    
+        )}
          
+        
       </main>
+     
+      
       <Footer></Footer>
+      
     </div>
   );
 }
