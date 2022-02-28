@@ -40,10 +40,10 @@ function Projects() {
   return (
     <div>
       <div className='flex-row'>
-        {projects.map((projects, idx) => (
+        {projects.map((project, idx) => (
           <ProjectCard
-            projects={projects}
-            key={'projects' + idx}
+            project={project}
+            key={'project' + idx}
           ></ProjectCard>        
         ))}
       </div>
