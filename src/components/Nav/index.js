@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
+
 function Nav(props) {
   const {
-    categories = [],
+    pages = [],
     setCurrentPage,
     contactSelected,
     currentPage,
@@ -18,33 +19,49 @@ function Nav(props) {
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+          {/* <span role="img" aria-label="camera"> 📸</span> Oh Snap! */}
         </a>
       </h2>
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+            <a data-testid="about" href="About" onClick={() => setContactSelected(false)}>
               About me
             </a>
           </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+          <li className="mx-2">
+            <a data-testid="portfolio" href="Portfolio" onClick={() => setContactSelected(false)}>
+              Portfolio
+            </a>
           </li>
-          {categories.map((category) => (
+          <li className="mx-2">
+            <a data-testid="contact" href="Contact" onClick={() => setContactSelected(false)}>
+              Contact
+            </a>
+          </li>
+          <li className="mx-2">
+            <a data-testid="resume" href="Resume" onClick={() => setContactSelected(false)}>
+              Resume
+            </a>
+          </li>
+          {/* <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+
+            <span onClick={() => setContactSelected(true)}>Contact</span>
+          </li> */}
+          {pages.map((page) => (
             <li
               className={`mx-1 ${
-                currentPage.name === category.name && !contactSelected && 'navActive'
+                currentPage.name === page.name && !contactSelected && 'navActive'
                 }`}
-              key={category.name}
+              key={page.name}
             >
               <span
                 onClick={() => {
-                  setCurrentPage(category);
+                  setCurrentPage(page);
                   setContactSelected(false);
                 }}
               >
-                {capitalizeFirstLetter(category.name)}
+                {capitalizeFirstLetter(page.name)}
               </span>
             </li>
           ))}
