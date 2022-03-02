@@ -25,7 +25,7 @@ function Nav(props) {
       </h2>
       <nav>
         <ul className="flex-row">
-          <li className="mx-2">
+          {/* <li className="mx-2">
             <a data-testid="about" href="About" onClick={() => setContactSelected(false)}>
               About me
             </a>
@@ -48,7 +48,7 @@ function Nav(props) {
           {/* <li className={`mx-2 ${contactSelected && 'navActive'}`}>
 
             <span onClick={() => setContactSelected(true)}>Contact</span>
-          </li> */}
+          </li> */} 
           {pages.map((page) => (
             <li
               className={`mx-1 ${

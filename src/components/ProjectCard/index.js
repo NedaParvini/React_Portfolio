@@ -1,14 +1,15 @@
 import React from 'react';
 import { removeHyphensAndCapitalize } from '../../utils/helpers';
 
+
 function ProjectCard({ project }) {
 
-  const {name, repo, link, description } = project;
+  const {name, repo, link, description, image } = project;
 
   return (
     <div className='project' key={name}>
       <img 
-        src={require(`../../assets/projects/${name}.jpg`).default}
+        src={require(`../../assets/projects/${image}.jpg`).default}
         alt={removeHyphensAndCapitalize(name)}
         className='project-bg'
       />
