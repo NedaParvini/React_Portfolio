@@ -28,7 +28,7 @@ Coolors
 
 ## Preview
 
-![Screenshot]() 
+![Screenshot](screenshot.jpg) 
 
 
 ## Link: 
